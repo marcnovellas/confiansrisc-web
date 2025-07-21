@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confians Risc – Seguros Inteligentes</title>
+  <meta name="description" content="Seguros inteligentes y personalizados para personas, familias y empresas. Confians Risc te ayuda a proteger lo que más importa.">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo de Confians Risc, seguros inteligentes" />
+    <nav>
+      <a href="#quienes-somos">Quiénes Somos</a>
+      <a href="#solicitar">Cotización</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Protege lo que más importa</h1>
+      <p>Seguros con criterio, compromiso y cercanía para proteger tu presente y construir tu tranquilidad futura.</p>
+      <a href="#solicitar" class="btn-primary">Solicita tu cotización</a>
+    </section>
+
+    <section id="quienes-somos" class="intro">
+      <h2>¿Quiénes somos?</h2>
+      <p>En <strong>Confians Risc</strong> trabajamos para ofrecer seguros adaptados a cada persona, familia o empresa. Colaboramos con <strong>Occident</strong>, una de las compañías más sólidas del sector, para brindarte seguridad con criterio, compromiso y cercanía.</p>
+      <p>Ofrecemos asesoramiento personalizado y transparente, con comparativas de coberturas y un seguimiento constante, además de una atención rápida y eficiente cuando más lo necesitas.</p>
+      <p>Nuestro propósito es acompañarte en cada decisión que proteja tu presente y construya tu tranquilidad futura.</p>
+    </section>
+
+    <section id="solicitar" class="lead-form">
+      <h2>Solicita tu cotización</h2>
+      <!-- Cambia el action a tu endpoint de Formspree o similar si lo deseas -->
+      <form action="https://formspree.io/f/tu-codigo-aqui" method="POST" autocomplete="on">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required autocomplete="name" />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required autocomplete="email" />
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required autocomplete="tel" />
+
+        <label for="mensaje">¿En qué podemos ayudarte?</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad, País</p>
+      <p><strong>Teléfono:</strong> +34 600 000 000</p>
+      <p><strong>Email:</strong> contacto@confiansrisc.com</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Confians Risc. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
