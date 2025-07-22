@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <img src="Imagen 14-7-25 a las 13.05 copia.png" alt="Logo de Confians Risc, seguros inteligentes" />
+    <img src="logo.png" alt="Logo de Confians Risc, seguros inteligentes" />
     <nav>
       <a href="#quienes-somos">Quiénes Somos</a>
       <a href="#solicitar">Cotización</a>
@@ -34,7 +34,6 @@
 
     <section id="solicitar" class="lead-form">
       <h2>Solicita tu cotización</h2>
-      <!-- Cambia el action a tu endpoint de Formspree o similar si lo deseas -->
       <form action="https://formspree.io/f/mdkdeknr" method="POST" autocomplete="on">
         <label for="nombre">Nombre completo</label>
         <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required autocomplete="name" />
@@ -63,5 +62,28 @@
   <footer>
     &copy; 2025 Confians Risc. Todos los derechos reservados.
   </footer>
+
+  <!-- Mensaje de éxito/error Formspree -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.lead-form form');
+    if(form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          form.innerHTML = "<p style='color:green;font-weight:600'>¡Gracias! Hemos recibido tu mensaje. Te contactaremos pronto.</p>";
+        } else {
+          form.innerHTML = "<p style='color:red;font-weight:600'>Hubo un problema. Intenta de nuevo o escríbenos a contacto@confiansrisc.com</p>";
+        }
+      });
+    }
+  });
+  </script>
 </body>
 </html>
