@@ -4,86 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confians Risc – Seguros Inteligentes</title>
-  <meta name="description" content="Seguros inteligentes y personalizados para personas, familias y empresas. Confians Risc te ayuda a proteger lo que más importa.">
-  <link rel="icon" href="favicon.ico" />
+  <meta name="description"
+    content="Seguros inteligentes y personalizados para personas, familias y empresas. Confians Risc te ayuda a proteger lo que más importa.">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body translate="no">
   <header>
-    <img src="Imagen 14-7-25 a las 13.05 copia.png" alt="Logo de Confians Risc, seguros inteligentes" />
+    <img src="Imagen-14-7-25…png" alt="Logo Confians Risc">
     <nav>
       <a href="#quienes-somos">Quiénes Somos</a>
-      <a href="#solicitar">Cotización</a>
+      <a href="#solicitar">Cotiza</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Protege lo que más importa</h1>
-      <p>Seguros con criterio, compromiso y cercanía para proteger tu presente y construir tu tranquilidad futura.</p>
+<main>
+  <section class="hero">
+    <video class="hero-bg" autoplay loop muted playsinline>
+      <source src="hero-loop.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Ride anywhere,<br>anytime</h1>
+      <p>Seguros inteligentes con criterio, cercanía y máximo compromiso.</p>
       <a href="#solicitar" class="btn-primary">Solicita tu cotización</a>
-    </section>
+    </div>
+  </section>
 
-    <section id="quienes-somos" class="intro">
-      <h2>¿Quiénes somos?</h2>
-      <p>En <strong>Confians Risc</strong> trabajamos para ofrecer seguros adaptados a cada persona, familia o empresa. Colaboramos con <strong>Occident</strong>, una de las compañías más sólidas del sector, para brindarte seguridad con criterio, compromiso y cercanía.</p>
-      <p>Ofrecemos asesoramiento personalizado y transparente, con comparativas de coberturas y un seguimiento constante, además de una atención rápida y eficiente cuando más lo necesitas.</p>
-      <p>Nuestro propósito es acompañarte en cada decisión que proteja tu presente y construya tu tranquilidad futura.</p>
-    </section>
+  <section id="quienes-somos" class="intro">
+    <h2>¿Quiénes somos?</h2>
+    <p>En <strong>Confians Risc</strong> ofrecemos seguros adaptados…</p>
+    <!-- Más contenido -->
+  </section>
 
-    <section id="solicitar" class="lead-form">
-      <h2>Solicita tu cotización</h2>
-      <form action="https://formspree.io/f/mdkdeknr" method="POST" autocomplete="on">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required autocomplete="name" />
+  <section id="solicitar" class="lead-form">
+    <h2>Solicita tu cotización</h2>
+    <form action="https://formspree.io/f/mdkdeknr" method="POST" autocomplete="on">
+      <!-- campos input… -->
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="Correo electrónico" required autocomplete="email" />
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p><strong>Dirección:</strong> Carrer d'Aribau 272, Barcelona, España</p>
+    <p><strong>Teléfono:</strong> +34 611 406 466</p>
+    <p><strong>Email:</strong> cr@occident.com</p>
+  </section>
+</main>
 
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required autocomplete="tel" />
+<footer>
+  &copy; 2025 Confians Risc. Todos los derechos reservados.
+</footer>
 
-        <label for="mensaje">¿En qué podemos ayudarte?</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <section id="contacto" class="contact">
-      <h2>Contacto</h2>
-      <p><strong>Dirección:</strong> Carrer d'Aribau 272, Barcelona, España</p>
-      <p><strong>Teléfono:</strong> +34 611 406 466</p>
-      <p><strong>Email:</strong> cr@occident.com</p>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Confians Risc. Todos los derechos reservados.
-  </footer>
-
-  <!-- Mensaje de éxito/error Formspree -->
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.lead-form form');
-    if(form) {
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const data = new FormData(form);
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          form.innerHTML = "<p style='color:green;font-weight:600'>¡Gracias! Hemos recibido tu mensaje. Te contactaremos pronto.</p>";
-        } else {
-          form.innerHTML = "<p style='color:red;font-weight:600'>Hubo un problema. Intenta de nuevo o escríbenos a contacto@confiansrisc.com</p>";
-        }
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.lead-form form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const resp = await fetch(form.action, {
+        method: 'POST', body: data, headers: { 'Accept': 'application/json' }
       });
-    }
+      form.innerHTML = resp.ok ? 
+         "<p class='form-msg ok'>¡Gracias!, contactaremos pronto.</p>" :
+         "<p class='form-msg err'>Error al enviar. Escríbenos a cr@occident.com</p>";
+    });
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.intro, .lead-form, .contact').forEach(el => {
+    el.classList.add('fade-up');
+    observer.observe(el);
   });
-  </script>
+});
+</script>
 </body>
 </html>
